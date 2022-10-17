@@ -1,0 +1,979 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700;800&display=swap"
+        rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">
+    <title>Blackcafe</title>
+    <style>
+        * {
+            padding: 0%;
+            margin: 0%;
+            box-sizing: border-box;
+        }
+
+        #banner {
+            height: 100%;
+            width: 100%;
+            background: url(./cafe/Banner-cafe-image-5.png);
+            background-size: cover;
+            object-fit: cover;
+            background-repeat: no-repeat;
+            background-position: center;
+        }
+
+        #banner .parent {
+            height: 714px;
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-wrap: wrap;
+        }
+
+        #banner .parent .box {
+            height: auto;
+            width: 600px;
+            margin: 15px;
+        }
+
+        #banner .parent .box h1 {
+            color: #ffff;
+            font-size: 60px;
+            font-weight: 600;
+        }
+
+        #banner .parent .box .h1 .hh {
+            color: #A93B00;
+        }
+
+        #banner .parent .box .pp {
+            font-family: 'Poppins', sans-serif;
+            color: #ffff;
+            font-size: 17px;
+            font-weight: 300;
+            margin: 20px 0px 60px 0px;
+        }
+
+        #banner .parent .box .btn {
+            color: #ffff;
+            font-size: 18px;
+            font-weight: 600;
+            padding: 18PX 70PX;
+            margin: 0px 10px;
+            background: none;
+            border-color: #A93B00;
+            transition: 0.3s ease-in-out;
+        }
+
+        #banner .parent .box .btn:hover {
+            background-color: #A93B00;
+        }
+
+        #info {
+            background-color: #F6F6F6;
+            height: 100%;
+            width: 100%;
+            padding: 40px 0px 140px 0px;
+        }
+
+        #info .parent {
+
+            height: 100%;
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-wrap: wrap;
+
+        }
+
+        #info .parent .box {
+            height: 800px;
+            width: 560px;
+            margin: 30px;
+        }
+
+        #info .parent .box1 {
+            height: 600px;
+            width: 640px;
+            margin: 50px;
+        }
+
+        #info .parent .box .img-1 {
+            height: 100%;
+            width: 100%;
+        }
+
+        #info .parent .box .img-1 img {
+            height: 100%;
+            width: 100%;
+            background-size: cover;
+            object-fit: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+        }
+
+        #info .parent .box1 .h2 {
+            font-size: 30px;
+            font-weight: 500;
+        }
+
+        #info .parent .box1 .h2 span {
+            color: #A93B00;
+        }
+
+        #info .parent .box1 .paragraph {
+            font-size: 17px;
+            font-weight: normal;
+            font-family: 'Poppins', sans-serif;
+            margin: 40px 0px 0px 0px;
+        }
+
+        #info .parent .box1 img {
+            margin: 50px 0;
+        }
+
+        #info .parent .box1 .name {
+            font-family: 'Poppins', sans-serif;
+            font-size: 17px;
+            margin: -40px 0px 8px 0px;
+        }
+
+        #info .parent .box1 .btn {
+            font-size: 18px;
+            font-weight: bold;
+            margin: 20px 0;
+            padding: 15px 60px;
+            transition: 00.3s ease-in-out;
+            background-color: #A93B00;
+            border-color: #A93B00;
+            color: #ffff
+        }
+
+        #info .parent .box1 .btn:hover {
+            border-color: #A93B00;
+            background-color: #ffff;
+            color: #A93B00;
+        }
+
+        #price {
+            height: 100%;
+            width: 100%;
+            padding: 50px 0px 20px 0px;
+            background-color: #F6F6F6
+        }
+
+        #price h1 {
+            font-size: 40px;
+            font-weight: 800;
+            text-align: center;
+            padding: 20px;
+        }
+
+        #price h1 span {
+            color: #A93B00;
+        }
+
+        #price .parent {
+            height: 100%;
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-wrap: wrap;
+        }
+
+        #price .parent .box {
+            background-color: #ffff;
+            height: 550px;
+            width: 300px;
+            margin: 13px;
+        }
+
+        #price .parent .box .img-1 {
+            height: 50%;
+            width: 100%;
+        }
+
+        #price .parent .box .img-1 img {
+            height: 100%;
+            width: 100%;
+            margin: 20px 0px 0px 0px;
+            background-size: cover;
+            object-fit: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+        }
+
+        #price .parent .box .name {
+            font-size: 21px;
+            font-weight: 600;
+            font-family: 'Poppins', sans-serif;
+            text-align: center;
+            margin: 50px 0px 0px 0px;
+        }
+
+        #price .parent .box .tag h3 {
+            font-size: 31px;
+            font-weight: 600;
+            text-align: center;
+            margin: 12px 0;
+            color: #A93B00;
+        }
+
+        #price .parent .box .btn button {
+            margin: 40px 45px;
+            padding: 14px 60px;
+            font-size: 12px;
+            font-weight: bold;
+            border-color: #A93B00;
+            transition: 000.3s ease-in-out
+        }
+
+        #price .parent .box .btn button:hover {
+            background-color: #A93B00;
+            color: #ffff;
+        }
+
+        #price .btn11 {
+            text-align: center;
+        }
+
+        #price .btn11 button {
+            font-size: 18px;
+            font-weight: bold;
+            align-items: center;
+            padding: 16px 70px;
+            margin: 20px 0;
+            color: #ffff;
+            background-color: #A93B00;
+            border-color: #A93B00;
+            transition: 00.3s ease-in-out;
+        }
+
+        #price .btn11 button:hover {
+            background: none;
+            border-color: #A93B00;
+            color: #A93B00;
+        }
+
+        #sale {
+            height: 100%;
+            width: 100%;
+            padding: 0px 0px 100px 0px;
+            background-color: #F6F6F6
+        }
+
+        #sale .parent {
+            height: 100%;
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-wrap: wrap;
+        }
+
+        #sale .parent .box {
+            height: 600px;
+            width: 650px;
+            margin: 50px;
+            padding: 80px 0px 0px 0px;
+        }
+
+        #sale .parent .box h1 {
+            font-weight: 700;
+            font-size: 40px;
+        }
+
+        #sale .parent .box h1 span {
+            color: #A93B00;
+        }
+
+        #sale .parent .box p {
+            font-size: 16px;
+            font-weight: normal;
+            font-family: 'Poppins', sans-serif;
+            margin: 35px 0;
+        }
+
+        #sale .parent .box .buy h3 {
+            font-size: 20px;
+            font-weight: 400;
+            font-family: 'Poppins', sans-serif;
+            margin: 0px 0px 25px 0px;
+        }
+
+        #sale .parent .box .list1 ul {
+            display: flex;
+            justify-content: space-around;
+            margin: 0px 0px 30px 0px;
+        }
+
+        #sale .parent .box .list2 ul {
+            display: flex;
+            justify-content: space-around;
+
+        }
+
+        #sale .parent .box1 {
+            height: 100%;
+            width: 600px;
+            background-color: #ffff;
+        }
+
+        #sale .parent .box1 .img-1 img {
+            height: 100%;
+            width: 100%;
+            background-size: cover;
+            object-fit: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+        }
+
+        #sale .parent .box .btn button {
+            text-align: center;
+            margin: 50px 0;
+            font-size: 18px;
+            font-weight: bold;
+            padding: 20px 100px;
+            color: #ffff;
+            background-color: #A93B00;
+            border-color: #A93B00;
+            transition: 00.3s ease-in-out;
+        }
+
+        #sale .parent .box .btn button:hover {
+            border-color: #A93B00;
+            color: #A93B00;
+            background-color: #ffff;
+        }
+
+        #review {
+            background-color: #F8ECDC;
+            height: 100%;
+            width: 100%;
+            padding: 100px 0px 0px 0px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        #review .head h1 {
+            text-align: center;
+            font-size: 40px;
+            font-weight: 800;
+            margin: -80px 0px 0px 0px;
+            padding: 15px 0px 54px 0;
+        }
+
+        #review h1 span {
+            color: #A93B00;
+        }
+
+        #review .para {
+            font-size: 16px;
+            font-weight: 300;
+            text-align: center;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        #review .photo {
+            height: 100%;
+            width: 100%;
+            background-size: cover;
+            object-fit: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            text-align: center;
+            padding: 30px 50px;
+        }
+
+        #review .photo img {
+            border-radius: 50%;
+            height: 100px;
+            width: 100px;
+        }
+
+        #review .name {
+            align-items: center;
+            font-size: 30px;
+            font-weight: 400px;
+        }
+
+        #review .name .ppp {
+            font-size: 20px;
+            align-items: center;
+            color: #5D5852;
+        }
+
+
+        #product {
+            background-color: #F6F6F6;
+            height: 100%;
+            width: 100%;
+            padding: 10px 0px 100px 0px;
+        }
+
+        #product h1 {
+            font-size: 40px;
+            text-align: center;
+            padding: 70px 0px 30px 0px;
+        }
+
+        #product h1 span {
+            color: #A93B00;
+        }
+
+        #product .parent {
+            height: 100%;
+            width: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        #product .parent .box {
+            background-color: #ffff;
+            height: 480px;
+            width: 300px;
+            margin: 10px;
+        }
+
+        #product .parent .box h1 {
+            color: #000000;
+            font-family: 'Poppins', sans-serif;
+            font-size: 21px;
+            font-weight: 600;
+            text-align: center;
+            padding: 20px 0px 20px 0px;
+        }
+
+        #product .parent .box .tag {
+            font-size: 31px;
+            text-align: center;
+            padding: 0px 0px 30px 0px;
+            color: #A93B00;
+        }
+
+        #product .parent .box .btn {
+            text-align: center;
+        }
+
+        #product .parent .box .btn button {
+            font-weight: bold;
+            font-size: 18px;
+            padding: 14px 40px;
+            color: rgb(0, 0, 0);
+            background: none;
+            border-color: #A93B00;
+            transition: 00.3s ease-in-out;
+        }
+
+        #product .parent .box .btn button:hover {
+            color: #ffff;
+            background-color: #A93B00;
+        }
+
+        #product .parent .box .box1 {
+            background-color: #ffff;
+            height: 250px;
+            width: 100%;
+        }
+
+        #product .parent .box .box1 img {
+            height: auto;
+            width: 100%;
+            background-size: cover;
+            object-fit: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            margin: 30px 0px 0px 0px;
+        }
+
+        #product .parent .box .box1 .phot {
+            height: 100%;
+            width: 100%;
+            background-size: cover;
+            object-fit: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+        }
+
+        #product .parent .box .box1 .phot img {
+            height: 200px;
+            width: 250px;
+        }
+
+        #product .parent .box .box1 .img3 img {
+            height: 70%;
+            width: 100%;
+            size: 30%;
+            background-size: cover;
+            object-fit: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            margin: 0px 0px 0px 0px;
+        }
+
+        #product .parent .box .box1 .cup {
+            height: 100%;
+            width: 100%;
+            background-size: cover;
+            object-fit: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            text-align: center;
+        }
+
+        #product .parent .box .box1 .cup img {
+            height: 200px;
+            width: 150px;
+        }
+
+        #product .btn {
+            text-align: center;
+        }
+
+        #product .btn button {
+            font-size: 18px;
+            font-weight: bold;
+            padding: 13px 60px;
+            background-color: #A93B00;
+            color: #ffffff;
+            border-color: #A93B00;
+            transition: 00.3s ease-in-out;
+            margin: 20px 0px 0px 0px;
+        }
+
+        #product .btn button:hover {
+            color: #A93B00;
+            border-color: #A93B00;
+            background: none;
+        }
+
+        #footer {
+            height: 100%;
+            width: 100%;
+            background-color: black;
+
+        }
+
+        #footer .parent {
+            height: 100%;
+            width: 100%;
+
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-wrap: wrap;
+        }
+
+        #footer .parent .box {
+
+            height: 200px;
+            width: 354px;
+            margin: 0px 40px 70px -40px;
+            padding: 40px 0px 0px 0px;
+
+        }
+
+        #footer .parent .box img {
+            padding: 20px 0;
+        }
+
+        #footer .parent .box p {
+            font-size: 14px;
+            font-weight: 400;
+            color: #F6F6F6;
+            font-family: 'Poppins', sans-serif;
+
+        }
+
+        #footer .parent .box p i {
+            color: #ffff;
+            margin: 0px 8px;
+            padding: 40px 0px 30px 0;
+            transition: 00.3s ease-in-out;
+        }
+
+        #footer .parent .box p i:hover {
+            color: #A93B00;
+        }
+
+        #footer .parent .box1 {
+
+            height: 200px;
+            width: 165px;
+            margin: 0px 40px 45px 0px;
+            padding: 40px 0px 0px 0px;
+        }
+
+        #footer .parent .box1 p {
+            color: #ffff;
+            font-size: 16px;
+            font-weight: 600;
+            font-family: 'Poppins', sans-serif;
+            margin: 0px 0px 0px 15px;
+        }
+
+        #footer .parent .box1 ul li {
+            font-size: 15px;
+            font-weight: 400;
+            color: #ffff;
+            font-family: 'Poppins', sans-serif;
+            margin: 15px;
+            transition: 0.3s ease-in-out;
+        }
+
+        #footer .parent .box1 ul li:hover {
+            color: #A93B00;
+        }
+
+        #footer .parent .box2 {
+
+            height: 200px;
+            width: 165px;
+            margin: 0px 0px 45px 0px;
+            padding: 40px 0px 0px 0px;
+        }
+
+        #footer .parent .box2 p {
+            color: #ffff;
+            font-size: 16px;
+            font-weight: 600;
+            font-family: 'Poppins', sans-serif;
+            margin: 0px 15px;
+        }
+
+        #footer .parent .box2 ul li {
+            font-size: 15px;
+            font-weight: 400;
+            color: #ffff;
+            font-family: 'Poppins', sans-serif;
+            margin: 19px;
+            transition: 0.3s ease-in-out;
+        }
+
+        #footer .parent .box2 ul li:hover {
+            color: #A93B00;
+        }
+
+        #footer hr {
+            margin: 40px 0px 0px 0px;
+        }
+
+        #footer .site {
+            color: #517A79;
+            font-size: 12px;
+            display: flex;
+            justify-content: space-between;
+            padding: 40px 40px;
+            font-family: 'Poppins', sans-serif;
+        }
+    </style>
+</head>
+
+
+<body>
+    <section id="banner">
+        <div class="parent">
+            <div class="box">
+                <div class="h1">
+                    <h1><em>Amazing People.</em></h1>
+                    <h1 class="hh"><em>Amazing Coffee.</em></h1>
+                </div>
+                <div class="pp">
+                    <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor.
+                        Aenean massa. Cum sociis natoque .</p>
+                </div>
+                <button class="btn">BUY NOW</button>
+                <button class="btn">ABOUT US</button>
+            </div>
+            <div class="box"></div>
+        </div>
+    </section>
+
+    <section id="info">
+        <div class="parent">
+            <div class="box">
+                <div class="img-1">
+                    <img src="./cafe/barista-preparing-coffee-PBK9B5H-min-scaled-2-683x1024.jpeg" alt="">
+                </div>
+            </div>
+
+            <div class="box1">
+                <div class="h2">
+                    <h1><em>One of the best <span>Black Cafe Maker</span></em></h1>
+                </div>
+                <div class="paragraph">
+                    <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor.
+                        Aenean
+                        massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.
+                        Donec
+                        quam felis, ultricies nec, pellentesque eu, pretium quis, sem. m. Integer tincidunt. <br><br>
+                        Cras dapibus. Vivamus Etiam ultricies nisi vel augue. Curabitur ullamcorper ultricies nisi
+                        elementum
+                        semper nisi. Aenean vulputate eleifend tellus. Aenean leo ligula, porttitor eu, consequat vitae,
+                        eleifend ac, <br><br> Aliquam lorem ante, dapibus in, viverra quis, feugiat a, tellus. Phasellus
+                        viverra nulla ut metus
+                        varius laoreet. Quisque rutrum. Aenean imperdiet.
+                    </p>
+                </div>
+                <img src="./cafe/John-Doe-signature.png" alt="">
+                <div class="name">
+                    <p>BARISTA OF BLACK CAFE</p>
+                </div>
+                <button class="btn">READ MORE</button>
+            </div>
+        </div>
+    </section>
+
+    <section id="price">
+        <h1><em>Black Cafe<span> Shop</span></em></h1>
+        <div class="parent">
+            <div class="box">
+                <div class="img-1">
+                    <img src="./cafe/cafe-latte.png" alt="">
+                </div>
+                <div class="name">
+                    <span>Cafe Latte</span>
+                </div>
+                <div class="tag">
+                    <h3><sup>$</sup>99.<sup>00</sup></h3>
+                </div>
+                <div class="btn">
+                    <button>LEARN MORE</button>
+                </div>
+            </div>
+            <div class="box">
+                <div class="img-1">
+                    <img src="./cafe/Americano.png" alt="">
+                </div>
+                <div class="name">
+                    <span>Americano</span>
+                </div>
+                <div class="tag">
+                    <h3><sup>$</sup>99.<sup>00</sup></h3>
+                </div>
+                <div class="btn">
+                    <button>LEARN MORE</button>
+                </div>
+            </div>
+            <div class="box">
+                <div class="img-1">
+                    <img src="./cafe/hot-choco.png" alt="">
+                </div>
+                <div class="name">
+                    <span>Hot Chocolate</span>
+                </div>
+                <div class="tag">
+                    <h3><sup>$</sup>99.<sup>00</sup></h3>
+                </div>
+                <div class="btn">
+                    <button>LEARN MORE</button>
+                </div>
+            </div>
+            <div class="box">
+                <div class="img-1">
+                    <img src="./cafe/Black-tea.png" alt="">
+                </div>
+                <div class="name">
+                    <span>Black Tea</span>
+                </div>
+                <div class="tag">
+                    <h3><sup>$</sup>99.<sup>00</sup></h3>
+                </div>
+                <div class="btn">
+                    <button>LEARN MORE</button>
+                </div>
+            </div>
+        </div>
+        <div class="btn11">
+            <button>VIEW MORE</button>
+        </div>
+    </section>
+
+    <section id="sale">
+        <div class="parent">
+            <div class="box">
+                <h1><em>Sale and delivery <span>points</span></em></h1>
+                <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium,
+                    totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae
+                    dicta sunt explicabo.</p>
+                <div class="buy">
+                    <h3>Where buy our coffee:</h3>
+                </div>
+                <div class="list1">
+                    <ul type="none">
+                        <i class="fa-sharp fa-solid fa-arrow-right"></i>
+                        <li>Canada (23)</li>
+                        <i class="fa-sharp fa-solid fa-arrow-right"></i>
+                        <li>Mexico (10)</li>
+                        <i class="fa-sharp fa-solid fa-arrow-right"></i>
+                        <li>Europe (379)</li>
+                    </ul>
+                </div>
+                <div class="list2">
+                    <ul type="none">
+                        <i class="fa-sharp fa-solid fa-arrow-right"></i>
+                        <li>USA (67)</li>
+                        <i class="fa-sharp fa-solid fa-arrow-right"></i>
+                        <li>Brazil (34)</li>
+                        <i class="fa-sharp fa-solid fa-arrow-right"></i>
+                        <li>Russia (22)</li>
+                    </ul>
+                </div>
+
+                <div class="btn">
+                    <button>READ MORE</button>
+                </div>
+            </div>
+            <div class="box1">
+                <div class="img-1">
+                    <img src="./cafe/barista-1.png" alt="">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="review">
+
+        <div class="head">
+            <h1><em>One of the best <span>Black Cafe</span></em></h1>
+        </div>
+        <div class="para">
+            <p>
+                Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium,
+                totam
+                rem aperiam, eaque ipsa <br>quae ab illo inventore veritatis et quasi architecto beatae vitae dicta
+                sunt
+                explicabo.</p>
+        </div>
+        <div class="photo">
+            <img src="./cafe/bc-testimonial-new.jpeg" alt="">
+            <div class="name">
+                <p>Jhon Doe Smile</p>
+                <p class="ppp">HAPPY CLIENT</p>
+            </div>
+        </div>
+
+        </div>
+    </section>
+
+    <section id="product">
+        <h1><em>Black Cafe <span>Shop</span></em></h1>
+        <div class="parent">
+            <div class="box">
+                <div class="box1">
+                    <img src="./cafe/sack-with-coffee-bean-QUZ7ABR-min-scaled-2-1024x686.jpeg" alt="">
+                </div>
+                <h1>Black Cafe Sack</h1>
+                <div class="tag">
+                    <h3><sup>$</sup>99.<sup>00</sup></h3>
+                </div>
+                <div class="btn">
+                    <button>LEARN MORE</button>
+                </div>
+            </div>
+
+            <div class="box">
+                <div class="box1">
+                    <div class="phot">
+                        <img src="./cafe/sachet-with-dried-lavender-PNMSGM4-min-scaled-6-new.jpeg" alt="">
+                    </div>
+                </div>
+                <h1>Black Cafe Sachet</h1>
+                <div class="tag">
+                    <h3><sup>$</sup>99.<sup>00</sup></h3>
+                </div>
+                <div class="btn">
+                    <button>LEARN MORE</button>
+                </div>
+            </div>
+
+            <div class="box">
+                <div class="box1">
+                    <div class="img3">
+                        <img src="./cafe/Coffee-Cup.H03.2k-min-1-1024x1024.png" alt="">
+                    </div>
+                </div>
+                <h1>Hot Chocolate</h1>
+                <div class="tag">
+                    <h3><sup>$</sup>99.<sup>00</sup></h3>
+                </div>
+                <div class="btn">
+                    <button>LEARN MORE</button>
+                </div>
+            </div>
+
+            <div class="box">
+                <div class="box1">
+                    <div class="cup">
+                        <img src="./cafe/Black-Cafe-min.png" alt="">
+                    </div>
+                </div>
+                <h1>Black Tea</h1>
+                <div class="tag">
+                    <h3><sup>$</sup>99.<sup>00</sup></h3>
+                </div>
+                <div class="btn">
+                    <button>LEARN MORE</button>
+                </div>
+            </div>
+        </div>
+        <div class="btn">
+            <button>VIEW MENU</button>
+        </div>
+    </section>
+
+    <section id="footer">
+        <div class="parent">
+            <div class="box">
+                <img src="./cafe/Black-Cafe-logo-1.png" alt="">
+                <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque ab illo dicta
+                    sunt explicabo.</p>
+                <p>
+                    <i class="fa-brands fa-facebook-f"></i>
+                    <i class="fa-brands fa-twitter"></i>
+                    <i class="fa-brands fa-pinterest-p"></i>
+                    <i class="fa-brands fa-instagram"></i>
+                </p>
+            </div>
+            <div class="box1">
+                <p>LATEST POST</p>
+                <ul type="none">
+                    <li>Expand your mind</li>
+                    <li>Place to get Lost</li>
+                    <li> Lewish Howes </li>
+                    <li> Make Friends</li>
+                </ul>
+
+            </div>
+
+            <div class="box2">
+                <p>CONTACT US</p>
+                <ul type="none">
+                    <li>Info@blackcafe</li>
+                    <li>2-454-128-4219</li>
+                    <li>Boulevard 224, New York</li>
+                </ul>
+            </div>
+        </div>
+        <hr>
+        <div class="site">
+            <p>Privacy (Updated) | Terms & Conditions | Accessibility | Do Not Sell My Info</p>
+            <p>© 2017 - 2020 BlackCafe. All Rights Reserved</p>
+        </div>
+    </section>
+</body>
+
+</html>
